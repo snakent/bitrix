@@ -3,7 +3,7 @@
     <!-- без формы авторизации соц сети не стартуют -->
     <div class="form" style="display: none;">
         <?$APPLICATION->IncludeComponent(
-            "cit:system.auth.form",
+            "bitrix:system.auth.form",
             "",
             Array(
                 "FORGOT_PASSWORD_URL" => "/login/password",
