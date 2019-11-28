@@ -26,13 +26,6 @@ class NotificationHandler
 
     function SendNotification($recipient, $message_id, $shedule = false)
     {
-        /*mail(
-            "netrebinsg@gmail.com", 
-            "Тема сообщения", 
-            "Сообщение"
-        );*/
-
-        //$recipient['EMAIL'], $recipient['ID']
         
         $eventName = "NOTIFY_CLIENT";
  
