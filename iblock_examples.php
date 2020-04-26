@@ -38,3 +38,18 @@ $arFields = array(
 );
 
 while($element = $result->Fetch()) $el->Update($element['ID'], $arFields);
+
+/**
+* Get additional Section fields UF_*
+*/
+$result = CIBlockSection::GetList(
+    array("SORT" => "ASC"), 
+    array("IBLOCK_ID" => $arParams["IBLOCK_ID"], 
+    "ID" =>$arResult["SECTION"]["ID"]), 
+    false, $arSelect = array("UF_*")
+); 
+
+if($arSection = $result->GetNext())
+{
+    echo $arSection["UF_FIELDNAME"];
+} 
